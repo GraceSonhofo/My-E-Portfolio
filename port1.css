@@ -1,0 +1,626 @@
+:root {
+    --bg-color1: #f2f2fc;
+    --text-black-2: #302e4d;
+    --bg-color3: #0a0a0a;
+    --bg-black-4: #e8dfec;
+    --bg-color5: #00ffee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins' sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+.main {
+    top: 50px;
+    background-color: rgb(4, 4, 4);
+    margin-left: 275px;
+    
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    background: rgb(4,4,4);
+    perspective: 1000px;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+}
+
+.me {
+    color: rgb(255, 255, 255);
+}
+
+.home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 50px;
+}
+
+h3.hello {
+    font-size: 25px;
+    margin: 15px 0;
+    color: rgb(255, 255, 255);
+}
+
+h3.hello span {
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+h3.profession {
+    font-size: 28px;
+    margin: 15px 0;
+    color: rgb(255, 255, 255);
+}
+
+.develop {
+    color: var(--skin-color);
+}
+
+.home-info p {
+    margin-bottom: 70px;
+    font-size: 17px;
+    color: rgb(113, 106, 106);
+}
+
+.home .flip {
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.icons {
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: 35px;
+}
+
+.linked {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: 35px;
+}
+
+.aside {
+    width: 250px;
+    background: rgb(252, 251, 251);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    padding: 40px;
+    border-right: 1px solid black;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside .welcome {
+    position: fixed;
+    top: 50px;
+    font: 30px;
+    text-transform: capitalize;
+    margin-left: -22px;
+    margin-bottom: 20px;
+}
+
+.aside .welcome a {
+    color: var(--bg-color1);
+    padding: 1px 2px;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.aside .welcome a #a {
+    font-family: 'Clicker Script', cursive;
+    font-feature-settings: 40px;
+}
+
+.aside .welcome a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    left: 0;
+    bottom: 0;
+    margin-left: -15px;
+}
+
+.aside .welcome a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: -10;
+    right: -10;
+    margin-left: 5px;
+}
+
+.aside .navtoggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid salmon;
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: rgb(18, 18, 18);
+    display: none;
+    align-items: center;
+    justify-content: center
+}
+
+.aside .navtoggler span {
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+
+.aside .navtoggler span::before {
+    content: ' ';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.aside .navtoggler span::after {
+    content: ' ';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.aside .navbar {
+    margin-top: 120px;
+    padding: 5px;
+}
+
+.aside .navbar li {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aside .navbar li a {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-4);
+    color: var(--text-black-2);
+    padding: 5px 15px;
+}
+
+.aside .navbar li a.active {
+    color: var(--skin-color);
+}
+
+.aside .navbar li a i {
+    margin-right: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+.welcome {
+    font-size: 2.5rem;
+    color:var(--bg-color1);
+    font-weight: 800;
+    font-family: Bradley Hand ITC;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0.3 ease-in-out;
+    display: flex;
+    margin-right: 24px;
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    color: rgb(76, 74, 79);
+    font-style: unset;
+    font-family: cursive;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 24px;
+    padding: 1px;
+}
+
+.navbar li a:hover {
+    color: rgb(7, 8, 7);
+    border-bottom: 5px solid var(--skin-color);
+}
+
+.navbar .A {
+    transition: 0.3s ease-in-out;
+}
+.navbar .A:hover {
+    transform: scale(1.3);
+}
+
+.navbar .S {
+    transition: 0.3s ease-in-out;
+}
+.navbar .S:hover {
+    transform: scale(1.3);
+}
+
+.navbar .P {
+    transition: 0.3s ease-in-out;
+}
+.navbar .P:hover {
+    transform: scale(1.3);
+}
+
+.navbar .I {
+    transition: 0.3s ease-in-out;
+}
+.navbar .I:hover {
+    transform: scale(1.3);
+}
+
+.mainc .aside .welcome #a {
+    animation-name: W;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes W {
+    from{color:#090909;}
+    to{ color: rgb(11, 239, 11);}
+}
+.mainc .aside .welcome #b {
+    animation-name: E;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes E {
+    from{color:#090909;}
+    to{color: rgb(79, 14, 244);}
+}
+.mainc .aside .welcome #c {
+    animation-name: L;
+    animation-duration: 2.1s;
+    animation-iteration-count: infinite;
+}
+@keyframes L {
+    from {color:#090909;}
+    to {color: rgb(226, 57, 19);}
+}
+.mainc .aside .welcome #d {
+    animation-name: C;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+}
+@keyframes C {
+    from {color:#090909;}
+    to {color: rgb(130, 25, 116);}
+}
+.mainc .aside .welcome #e {
+    animation-name: O;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+}
+@keyframes O {
+    from {color:#090909;}
+    to {color: rgb(220, 128, 82);}
+}
+.mainc .aside .welcome #f {
+    animation-name: M;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;   
+}
+@keyframes M {
+    from {color:#090909;}
+    to { color: rgb(25, 99, 134);}
+}
+.mainc .aside .welcome #g {
+    animation-name: E;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes E {
+    from{color:#090909;}
+    to {color: rgb(129, 10, 10);}
+}
+
+.flip .flipbox {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    margin-top: 50px;
+}
+
+.flip:hover .flipbox {
+    transform: rotateY(180deg);
+} 
+
+.image, .imageback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.image img{
+    border-radius: 100%;
+}
+
+.imageback img{
+    border-radius: 100%;
+}
+
+.flip .flipbox .image {
+    background-color: transparent;
+    color: black;
+  }
+  
+.flip .flipbox .imageback {
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.section {
+    background: rgb(4, 4, 4);
+    min-height: 100vh; 
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+
+.Skills .container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.Skills .container .row{
+    flex: 1 1 30rem;
+    position: relative;
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+
+}
+
+.Skills .container .row .langimagewrap {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.Skills .container .row .langimagewrap img {
+    height: 100px;
+    width: 100px;
+}
+
+.langimage {
+    width: 150px;
+    animation: moveUpDown 2s ease-in-out infinite;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.langname {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+.langimage, .langname {
+    animation: moveUpDown 2s ease-in-out infinite; 
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.langimagewrap:hover .langimage,
+.langimagewrap:hover .langname {
+    transform: translateY(-10px); /* Slightly move up both the logo and the name */
+    opacity: 0.7; /* Slightly fade both the logo and the name */
+}
+
+.langimagewrap:hover .langname {
+    opacity: 1; /* Ensure name is fully visible when hovered */
+}
+
+.section-title {
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+.box {
+    flex: 1 1 400px;
+}
+
+.box h3 {
+    color: var(--skin-color);
+    font-size: 40px;
+    padding: 16px 0;
+}
+
+.box a {
+    display: block;
+    color: #666;
+    font-size: 24px;
+    padding: 16px 0;
+}
+
+.box a {
+    display: block;
+    color: #666;
+    font-size: 24px;
+    padding: 16px 0;
+}
+
+.box a:hover {
+    color: rgb(252, 249, 249);
+    text-decoration: underline;
+}
+
+.box img {
+    margin-top: 16px;
+}
+
+.credit {
+    text-align: center;
+    padding: 24px;
+    margin-top: 24px;
+    padding-top: 40px;
+    font-size: 32px;
+    color: #ffffff;
+    border-top: 1.6px solid rgba(0,0,0,.1);
+}
+
+.credit {
+    font: bold; 
+    transition: transform 0.3s ease;
+}
+
+.credit .material-icons img {
+    width: 2px;
+    height: 1px;
+}
+
+.credit:hover {
+    transform: scale(1.2);
+    color: rgba(225, 218, 218, 0.41);
+}
+
+form {
+    flex: 1 1 300px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    border: 4px solid rgba(0,0,0,.1);
+    background-image: url(KI.jpg);
+    border: 4px;
+    width: 20px;
+}
+
+form .box {
+    padding: 8px;
+    font-size: 12px;
+    text-transform: none;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 6px 0;
+    width: 55%; 
+}
+
+form .box:focus {
+    border-color: rgba(5, 31, 70, 0.582);
+}
+
+h1 {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.footer .container .row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 55px;
+    width: 900px;
+    text-align: center;
+}
+
+.Interact {
+    background-color: rgb(4, 4, 4);
+    text-align: center;
+}
+
+h2 {
+    margin-top: 25px;
+}
+
+.mainc {
+    background: rgb(4, 4, 4);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.btn {
+    display: flex;
+    margin-left: 400px;
+    border-radius: 80px;
+    background: rgba(255, 255, 255, 0.459);
+    color:#050505;
+    padding: 7px 40px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background:rgba(190, 27, 41, 0.863);
+}
